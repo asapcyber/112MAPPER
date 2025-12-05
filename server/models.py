@@ -1,25 +1,28 @@
 # server/models.py
-from sqlalchemy import Column, Integer, String, Float, DateTime
-from sqlalchemy.sql import func
-from server.db import Base
+from sqlalchemy import Column, Integer, Float, String, Boolean
+from .db import Base
 
 class Call(Base):
     __tablename__ = "calls"
+
     id = Column(Integer, primary_key=True, index=True)
-    call_log = Column(String, nullable=False)
-    address = Column(String, nullable=False)
-    # Optional direct geo to avoid external geocoding
-    lat = Column(Float, nullable=True)
-    lon = Column(Float, nullable=True)
-    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    address = Column(String, index=True)
+    transcript = Column(String)
+    lat = Column(Float)
+    lon = Column(Float)
+    # Optional: whether this call was E33-related
+    is_e33 = Column(Boolean, default=False)
+
 
 class Region(Base):
     __tablename__ = "regions"
+
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, nullable=False)                 # e.g., neighborhood name
-    center_lat = Column(Float, nullable=False)
-    center_lon = Column(Float, nullable=False)
-    crime_level = Column(Integer, nullable=False)         # 1..5
-    incident_count = Column(Integer, nullable=False)
-    month_year = Column(String, nullable=False)           # e.g., "2025-08"
-    prevalent_crime_type = Column(String, nullable=False) # e.g., "drugs", "robberies", "violent"
+    name = Column(String, index=True)          # should match buurt name in GeoJSON
+    center_lat = Column(Float)
+    center_lon = Column(Float)
+    crime_level = Column(Integer)              # 1–5
+    incident_count = Column(Integer)           # total incidents
+    e33_count = Column(Integer, default=0)     # subset of incidents that are E33
+    month_year = Column(String, index=True)    # e.g. "2025-07"
+    prevalent_crime_type = Column(String)      # e.g. "drugs", "robberies", "violent", "other"

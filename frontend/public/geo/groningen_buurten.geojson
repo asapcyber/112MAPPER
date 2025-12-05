@@ -1,0 +1,170 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Binnenstad"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.56,
+              53.217
+            ],
+            [
+              6.568,
+              53.217
+            ],
+            [
+              6.568,
+              53.223
+            ],
+            [
+              6.56,
+              53.223
+            ],
+            [
+              6.56,
+              53.217
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Beijum"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.59,
+              53.245
+            ],
+            [
+              6.61,
+              53.245
+            ],
+            [
+              6.61,
+              53.26
+            ],
+            [
+              6.59,
+              53.26
+            ],
+            [
+              6.59,
+              53.245
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lewenborg"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.625,
+              53.24
+            ],
+            [
+              6.645,
+              53.24
+            ],
+            [
+              6.645,
+              53.255
+            ],
+            [
+              6.625,
+              53.255
+            ],
+            [
+              6.625,
+              53.24
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hoornsemeer"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.55,
+              53.19
+            ],
+            [
+              6.565,
+              53.19
+            ],
+            [
+              6.565,
+              53.205
+            ],
+            [
+              6.55,
+              53.205
+            ],
+            [
+              6.55,
+              53.19
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "De Wijert"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.56,
+              53.2
+            ],
+            [
+              6.575,
+              53.2
+            ],
+            [
+              6.575,
+              53.212
+            ],
+            [
+              6.56,
+              53.212
+            ],
+            [
+              6.56,
+              53.2
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
